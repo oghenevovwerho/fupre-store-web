@@ -108,87 +108,85 @@
   }
 </script>
 
-<div class="bg-[#faf9f7] flex flex-col justify-between h-full">
-  <div>
-    <button
-      class="nav-link"
-      class:active={activeLink === "All products"}
-      on:click={() => setActive("All products")}
-    >
-      <div class="link-left">
-        <div class="link-dot"></div>
-        <span class="link-name">All products</span>
-      </div>
-    </button>
+<div class="bg-[#faf9f7] flex flex-col justify-between pb-2 h-[88svh]">
+  <button
+    class="nav-link"
+    class:active={activeLink === "All products"}
+    on:click={() => setActive("All products")}
+  >
+    <div class="link-left">
+      <div class="link-dot"></div>
+      <span class="link-name">All products</span>
+    </div>
+  </button>
 
-    {#each categories as cat}
-      {#if cat.sub.length > 0}
-        <button
-          class="nav-link"
-          class:active={activeLink === cat.name}
-          class:open={openSubmenu === cat.name}
-          on:click={() => toggleSubmenu(cat.name)}
-        >
-          <div class="link-left">
-            <div class="link-dot"></div>
-            <span class="link-name">{cat.name}</span>
-          </div>
-          <div class="link-right">
-            <svg
-              class="arrow"
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
-          </div>
-        </button>
-
-        <div class="submenu" class:open={openSubmenu === cat.name}>
-          {#each cat.sub as sub}
-            <button
-              class="sub-link"
-              class:active={activeSubLink === sub.name}
-              on:click={() => setSubActive(sub.name)}
-            >
-              <span>{sub.name}</span>
-              <span class="sub-count">{sub.count}</span>
-            </button>
-          {/each}
-        </div>
-      {:else}
-        <button
-          class="nav-link"
-          class:active={activeLink === cat.name}
-          on:click={() => setActive(cat.name)}
-        >
-          <div class="link-left">
-            <div class="link-dot"></div>
-            <span class="link-name">{cat.name}</span>
-          </div>
-          <!-- <span class="link-count">{cat.count}</span> -->
-        </button>
-      {/if}
-    {/each}
-
-    <div class="section-head">Collections</div>
-    {#each collections as col}
+  {#each categories as cat}
+    {#if cat.sub.length > 0}
       <button
         class="nav-link"
-        class:active={activeLink === col.name}
-        on:click={() => setActive(col.name)}
+        class:active={activeLink === cat.name}
+        class:open={openSubmenu === cat.name}
+        on:click={() => toggleSubmenu(cat.name)}
       >
         <div class="link-left">
           <div class="link-dot"></div>
-          <span class="link-name">{col.name}</span>
+          <span class="link-name">{cat.name}</span>
+        </div>
+        <div class="link-right">
+          <svg
+            class="arrow"
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
         </div>
       </button>
-    {/each}
-  </div>
+
+      <div class="submenu" class:open={openSubmenu === cat.name}>
+        {#each cat.sub as sub}
+          <button
+            class="sub-link"
+            class:active={activeSubLink === sub.name}
+            on:click={() => setSubActive(sub.name)}
+          >
+            <span>{sub.name}</span>
+            <span class="sub-count">{sub.count}</span>
+          </button>
+        {/each}
+      </div>
+    {:else}
+      <button
+        class="nav-link"
+        class:active={activeLink === cat.name}
+        on:click={() => setActive(cat.name)}
+      >
+        <div class="link-left">
+          <div class="link-dot"></div>
+          <span class="link-name">{cat.name}</span>
+        </div>
+        <!-- <span class="link-count">{cat.count}</span> -->
+      </button>
+    {/if}
+  {/each}
+
+  <div class="section-head">Collections</div>
+  {#each collections as col}
+    <button
+      class="nav-link"
+      class:active={activeLink === col.name}
+      on:click={() => setActive(col.name)}
+    >
+      <div class="link-left">
+        <div class="link-dot"></div>
+        <span class="link-name">{col.name}</span>
+      </div>
+    </button>
+  {/each}
 
   <div class="pl-4">
     <div class="filter-label">filter by price</div>

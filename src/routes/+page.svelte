@@ -5,13 +5,12 @@
   import products from "./data";
 </script>
 
-<NavigationMenu />
-
-<!-- <div class="relative h-full w-full bg-[#faf9f7]">
+<div class="relative h-full w-full bg-[#faf9f7]">
+  <!-- <TopNavigation /> -->
   <NavigationMenu />
-  <div class="flex">
+  <div class="flex h-full">
     <aside
-      class="max-sm:hidden h-full sticky top-14 w-40 md:w-52"
+      class="max-sm:hidden h-full bg-amber-700 sticky top-[12svh] w-40 md:w-52"
     >
       <Aside />
     </aside>
@@ -23,4 +22,4 @@
       {/each}
     </div>
   </div>
-</div> -->
+</div>

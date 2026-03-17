@@ -37,7 +37,7 @@
 	top-0
 	z-50
 	flex
-	h-14 w-full
+	h-[12svh] w-full
 	items-center
 	justify-between
 	bg-[#faf9f7]
