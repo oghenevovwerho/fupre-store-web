@@ -5,8 +5,9 @@
   import products from "./data";
 </script>
 
-<div class="relative h-full w-full bg-[#faf9f7]">
-  <!-- <TopNavigation /> -->
+<NavigationMenu />
+
+<!-- <div class="relative h-full w-full bg-[#faf9f7]">
   <NavigationMenu />
   <div class="flex">
     <aside
@@ -22,4 +23,4 @@
       {/each}
     </div>
   </div>
-</div>
+</div> -->
