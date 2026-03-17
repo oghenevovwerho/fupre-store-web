@@ -118,7 +118,7 @@
 
       <!-- Price -->
       <div class="flex items-baseline gap-2.5">
-        <span class="text-[30px] font-medium text-[#1a1814] font-[serif]">
+        <span class="text-[30px] font-medium text-[#1a1814]">
           {product.currency}{product.price.toLocaleString()}
         </span>
         {#if product.comparePrice}

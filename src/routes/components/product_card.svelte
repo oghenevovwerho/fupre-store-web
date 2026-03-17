@@ -56,7 +56,7 @@
 {#snippet bottomInfo()}
   <div class="flex flex-col gap-0.75 px-0.5 mt-1">
     <!-- Name -->
-    <div class="text-sm font-semibold font-serif text-[#1a1814]">
+    <div class="text-sm font-semibold text-[#1a1814]">
       {name}
     </div>
 
@@ -68,7 +68,7 @@
     </div>
 
     <!-- Price -->
-    <div class="text-sm text-[#1a1814] font-serif flex justify-between">
+    <div class="text-sm text-[#1a1814] flex justify-between">
       <span>{`\u20A6${amount.toLocaleString("en-US")}`}</span>
       <span
         class={`
