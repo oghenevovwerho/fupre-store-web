@@ -1,0 +1,71 @@
+import type { Product } from './types.js';
+
+export const DEFAULT_PRODUCT: Product = {
+  id: 'LSO-001',
+  name: 'Linen Overshirt',
+  subtitle: 'Relaxed silhouette in washed Belgian linen',
+  price: 108000,
+  comparePrice: 123000,
+  currency: `\u20A6`,
+  category: 'Women / Tops & blouses',
+  rating: 4.7,
+  reviewCount: 38,
+  tag: 'new',
+  description:
+    'Cut from 100% washed Belgian linen, this overshirt moves between seasons with ease. The relaxed, boxy silhouette sits just below the hip — wear it open over a simple tank or buttoned as a lightweight layer. Two chest pockets, a single back pleat for ease of movement, and mother-of-pearl buttons throughout.',
+  details: [
+    '100% washed Belgian linen',
+    'Relaxed boxy fit — model wears size S',
+    'Two chest patch pockets',
+    'Mother-of-pearl buttons',
+    'Single back pleat',
+    'Machine wash 30°C, hang dry',
+  ],
+  shipping: [
+    'Free standard delivery on orders over £120',
+    'Express delivery available at checkout',
+    'Free returns within 28 days',
+    'Delivered in recycled, plastic-free packaging',
+  ],
+  sizes: ['XS', 'S', 'M', 'L', 'XL'],
+  outOfStock: ['XL'],
+  colours: [
+    { name: 'Sand',  hex: '#c0a882' },
+    { name: 'Green', hex: '#008000' },
+    { name: 'Slate', hex: '#4a5568' },
+    { name: 'Moss',  hex: '#7a8c7e' },
+  ],
+  images: [
+    { label: 'Front'  },
+    { label: 'Back'   },
+    { label: 'Detail' },
+    { label: 'Worn'   },
+    { label: 'Unbox'   },
+  ],
+  reviews: [
+    {
+      author: 'Clara M.',
+      date: 'Feb 2025',
+      rating: 5,
+      size: 'S',
+      fit: 'True to size',
+      body: "Absolutely beautiful quality. The linen feels substantial but drapes perfectly. I've worn it every week since it arrived.",
+    },
+    {
+      author: 'Théa R.',
+      date: 'Jan 2025',
+      rating: 5,
+      size: 'M',
+      fit: 'Slightly large',
+      body: "Gorgeous piece. I'm usually between S and M, went with M and it's a little roomy — which actually works well for the oversized look.",
+    },
+    {
+      author: 'Sofía L.',
+      date: 'Dec 2024',
+      rating: 4,
+      size: 'S',
+      fit: 'True to size',
+      body: "Lovely fabric, great cut. The only minor thing is the buttons took a bit of getting used to, but they're beautiful once you do.",
+    },
+  ],
+};
