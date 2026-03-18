@@ -41,7 +41,7 @@
 </script>
 
 {#if visible}
-	<div class="fixed top-16 left-0 z-9999 h-[1.25px] w-full bg-transparent">
+	<div class="fixed top-0.5 left-0 z-9999 h-[1.25px] w-full bg-transparent">
 		<div
 			class="h-full bg-linear-to-r from-red-500 to-[#1651af] shadow-[0_0_10px_#1651af] transition-all duration-200 ease-out"
 			style="width: {progress}%"

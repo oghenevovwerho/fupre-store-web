@@ -2,22 +2,22 @@
     let query = $state("");
 </script>
 
-<form class="relative w-full flex-1 h-11.25">
+<form class="relative h-11 md:h-10.5 w-[55ch]">
     <input
         bind:value={query}
         name="search for products"
         placeholder="I'm shopping for..."
         type="text"
         autocomplete="off"
-        class="h-full placeholder:text-sm placeholder:text-[#ebddc5] w-full text-gray-700 rounded-full pb-2 pt-1.5 bg-[#faf9f7] border-[1.25px] border-[#ebddc5] pl-4 text-sm outline-0"
+        class="h-full w-full sm:pb-0.5 pl-2 placeholder:text-sm placeholder:text-[#a09890] text-gray-700 rounded-2xl bg-[#faf9f7] border-[1.25px] border-[#a09890] text-sm outline-0"
     />
     <div
-        class="absolute inset-y-0 right-1.5 h-full flex items-center justify-center"
+        class="absolute inset-y-0 right-0 h-full aspect-square flex items-center justify-center"
     >
         <button
             type="submit"
             aria-label="button"
-            class="bg-[#faf9f7] border-[1.25px] border-dashed border-[#ebddc5] shadow-blue-100 rounded-full p-2.25 cursor-pointer active:scale-[1.025]"
+            class="bg-[#faf9f7] h-[90%] w-[90%] flex items-center justify-center border-[1.25px] border-dashed border-[#a09890] shadow-blue-100 rounded-[14px] hover:border-solid cursor-pointer active:scale-105"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +26,7 @@
                 viewBox="0 0 48 48"
                 ><g
                     fill="none"
-                    stroke="#ebddc5"
+                    stroke="#a09890"
                     stroke-linejoin="round"
                     stroke-width="3.5"
                     ><path

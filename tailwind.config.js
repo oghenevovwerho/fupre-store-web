@@ -1,8 +1,18 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-    safelist: ["*"],
+
+
+export default {
     theme: {
-        extend: {}, // Add your custom theme customizations here
+        extend: {
+            keyframes: {
+                shimmer: {
+                    '0%': { backgroundPosition: '200% center' },
+                    '100%': { backgroundPosition: '-200% center' },
+                },
+            },
+            animation: {
+                shimmer: 'shimmer 1.6s ease-in-out infinite',
+            },
+        },
     },
-    plugins: [], // Add Tailwind plugins here (e.g., DaisyUI, Typography)
-};
+}

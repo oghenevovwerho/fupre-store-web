@@ -108,7 +108,9 @@
   }
 </script>
 
-<div class="bg-[#faf9f7] flex flex-col justify-between pb-2 h-[88svh]">
+<div
+  class="bg-[#faf9f7] flex flex-col justify-between pb-2 h-[90svh] sm:h-[88svh]"
+>
   <button
     class="nav-link"
     class:active={activeLink === "All products"}
@@ -174,7 +176,11 @@
     {/if}
   {/each}
 
-  <div class="section-head">Collections</div>
+  <div
+    class="text-[10px] tracking-[0.14e] uppercase text-[#b8b0a8] p-3 font-medium"
+  >
+    Collections
+  </div>
   {#each collections as col}
     <button
       class="nav-link"

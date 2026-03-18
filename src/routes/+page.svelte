@@ -1,7 +1,7 @@
 <script lang="ts">
   import NavigationMenu from "$lib/components/topnav/navigationMenu.svelte";
-  import Aside from "./components/aside.svelte";
-  import ProductCard from "./components/product_card.svelte";
+  import Aside from "../lib/components/_home/aside.svelte";
+  import ProductCard from "../lib/components/_home/product_card.svelte";
   import products from "./data";
 </script>
 
@@ -15,7 +15,7 @@
       <Aside />
     </aside>
     <div
-      class="grid flex-1 grid-cols-2 px-2 pt-3 gap-x-2 gap-y-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
+      class="grid flex-1 grid-cols-2 px-2 pt-3 gap-x-2 gap-y-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
     >
       {#each products as product (product.image)}
         <ProductCard {...product} />
