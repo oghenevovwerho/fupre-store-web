@@ -161,7 +161,7 @@
             flex shrink-0 flex-col justify-center overflow-hidden
             px-2 py-1
             transition-colors duration-300 hover:bg-gray-800
-            {card.dark ? 'bg-[#1A1A1C]' : 'bg-[#222226]'}
+            bg-[#1A1A1C]
           "
         >
           <p class="text-[8px] font-medium uppercase text-[#B8962E]">{card.description}</p>
