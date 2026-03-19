@@ -65,9 +65,7 @@
     </div>
 
     <!-- Price -->
-    <div
-      class="text-sm text-[#1a1814] flex justify-between items-center"
-    >
+    <div class="text-sm text-[#1a1814] flex justify-between items-center">
       <span class="font-semibold font-serif"
         >{`\u20A6${amount.toLocaleString("en-US")}`}</span
       >
@@ -80,7 +78,7 @@
           font-medium
           rounded-sm 
           text-[10px] 
-          border border-gray-200
+          border border-gray-400
           h-3.75 px-0.75 
           flex 
           items-center`}
@@ -90,7 +88,7 @@
         {/if}
         <!-- VERIFIED BADGE -->
         <svg
-          class="stroke-green-700 size-6 md:size-5"
+          class="stroke-green-700 size-5.5 md:size-4.5"
           xmlns="http://www.w3.org/2000/svg"
           width="16"
           height="16"
@@ -100,11 +98,13 @@
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="1.5"
-            ><path
+          >
+            <path
               d="M3.85 8.62a4 4 0 0 1 4.78-4.77a4 4 0 0 1 6.74 0a4 4 0 0 1 4.78 4.78a4 4 0 0 1 0 6.74a4 4 0 0 1-4.77 4.78a4 4 0 0 1-6.75 0a4 4 0 0 1-4.78-4.77a4 4 0 0 1 0-6.76"
-            /><path d="m9 12l2 2l4-4" /></g
-          ></svg
-        >
+            />
+            <path d="m9 12l2 2l4-4" />
+          </g>
+        </svg>
       </div>
     </div>
   </div>

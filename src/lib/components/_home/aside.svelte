@@ -12,7 +12,11 @@
         { name: "Trousers & skirts", count: 22 },
         { name: "Dresses", count: 18 },
         { name: "Outerwear", count: 14 },
-        { name: "Knitwear", count: 12 },
+        { name: "Knitwear", count: 121 },
+        { name: "Knitwear1", count: 122 },
+        { name: "Knitwear2", count: 123 },
+        { name: "Knitwear3", count: 124 },
+        { name: "Knitwear4", count: 125 },
       ],
     },
     {
@@ -109,92 +113,102 @@
 </script>
 
 <div
-  class="bg-[#faf9f7] flex flex-col justify-between pb-2 h-[90svh] sm:h-[88svh]"
+  class="bg-[#faf9f7] relative h-[90svh] sm:h-[88svh] px-2"
 >
-  <button
-    class="nav-link"
-    class:active={activeLink === "All products"}
-    on:click={() => setActive("All products")}
-  >
-    <div class="link-left">
-      <div class="link-dot"></div>
-      <span class="link-name">All products</span>
-    </div>
-  </button>
-
-  {#each categories as cat}
-    {#if cat.sub.length > 0}
-      <button
-        class="nav-link"
-        class:active={activeLink === cat.name}
-        class:open={openSubmenu === cat.name}
-        on:click={() => toggleSubmenu(cat.name)}
-      >
-        <div class="link-left">
-          <div class="link-dot"></div>
-          <span class="link-name">{cat.name}</span>
-        </div>
-        <div class="link-right">
-          <svg
-            class="arrow"
-            width="12"
-            height="12"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <polyline points="9 18 15 12 9 6" />
-          </svg>
-        </div>
-      </button>
-
-      <div class="submenu" class:open={openSubmenu === cat.name}>
-        {#each cat.sub as sub}
-          <button
-            class="sub-link"
-            class:active={activeSubLink === sub.name}
-            on:click={() => setSubActive(sub.name)}
-          >
-            <span>{sub.name}</span>
-            <span class="sub-count">{sub.count}</span>
-          </button>
-        {/each}
-      </div>
-    {:else}
-      <button
-        class="nav-link"
-        class:active={activeLink === cat.name}
-        on:click={() => setActive(cat.name)}
-      >
-        <div class="link-left">
-          <div class="link-dot"></div>
-          <span class="link-name">{cat.name}</span>
-        </div>
-        <!-- <span class="link-count">{cat.count}</span> -->
-      </button>
-    {/if}
-  {/each}
-
-  <div
-    class="text-[10px] tracking-[0.14e] uppercase text-[#b8b0a8] p-3 font-medium"
-  >
-    Collections
-  </div>
-  {#each collections as col}
+  <div class="flex flex-col flex-1">
     <button
       class="nav-link"
-      class:active={activeLink === col.name}
-      on:click={() => setActive(col.name)}
+      class:active={activeLink === "All products"}
+      on:click={() => setActive("All products")}
     >
       <div class="link-left">
         <div class="link-dot"></div>
-        <span class="link-name">{col.name}</span>
+        <span class="link-name">All products</span>
       </div>
     </button>
-  {/each}
 
-  <div class="pl-4">
+    {#each categories as cat}
+      {#if cat.sub.length > 0}
+        <button
+          class="nav-link
+        flex
+        items-center
+        justify-between
+        cursor-pointer
+        text-[#4a4540]
+        w-full
+        text-left
+        "
+          class:active={activeLink === cat.name}
+          class:open={openSubmenu === cat.name}
+          on:click={() => toggleSubmenu(cat.name)}
+        >
+          <div class="link-left">
+            <div class="link-dot"></div>
+            <span class="link-name">{cat.name}</span>
+          </div>
+          <div class="link-right">
+            <svg
+              class="arrow"
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </div>
+        </button>
+
+        <div class="submenu" class:open={openSubmenu === cat.name}>
+          {#each cat.sub as sub}
+            <button
+              class="sub-link"
+              class:active={activeSubLink === sub.name}
+              on:click={() => setSubActive(sub.name)}
+            >
+              <span>{sub.name}</span>
+              <span class="sub-count">{sub.count}</span>
+            </button>
+          {/each}
+        </div>
+      {:else}
+        <button
+          class="nav-link"
+          class:active={activeLink === cat.name}
+          on:click={() => setActive(cat.name)}
+        >
+          <div class="link-left">
+            <div class="link-dot"></div>
+            <span class="link-name">{cat.name}</span>
+          </div>
+          <!-- <span class="link-count">{cat.count}</span> -->
+        </button>
+      {/if}
+    {/each}
+
+    <div
+      class="text-[10px] tracking-[0.14e] uppercase text-[#b8b0a8] p-3 font-medium"
+    >
+      Collections
+    </div>
+    {#each collections as col}
+      <button
+        class="nav-link"
+        class:active={activeLink === col.name}
+        on:click={() => setActive(col.name)}
+      >
+        <div class="link-left">
+          <div class="link-dot"></div>
+          <span class="link-name">{col.name}</span>
+        </div>
+      </button>
+    {/each}
+  </div>
+
+  <!-- <div class="pl-4 pt-2  pb-1 bg-[#faf9f7]">
     <div class="filter-label">filter by price</div>
     <div class="filter-group">
       <div class="price-range">
@@ -217,31 +231,12 @@
         />
       </div>
     </div>
-  </div>
+  </div> -->
 </div>
 
 <style>
-  .section-head {
-    font-size: 10px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: #b8b0a8;
-    padding: 6px 24px 3px;
-    font-weight: 500;
-  }
-
   .nav-link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 9px 12px;
-    cursor: pointer;
     transition: background 0.15s;
-    color: #4a4540;
-    background: none;
-    border: none;
-    width: 100%;
-    text-align: left;
   }
   .nav-link:hover {
     color: #ecd0a5;
@@ -293,7 +288,7 @@
     transition: max-height 0.28s ease;
   }
   .submenu.open {
-    max-height: 400px;
+    max-height: 800px;
   }
 
   .sub-link {
