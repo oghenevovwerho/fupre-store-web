@@ -74,11 +74,10 @@
           <span
             class={`
           bg-gray-100
-          text-black/75 
+          text-black/65
           font-medium
           rounded-sm 
-          text-[10px] 
-          border border-gray-400
+          text-[10px]
           h-3.75 px-0.75 
           flex 
           items-center`}
