@@ -1,4 +1,5 @@
 <script lang="ts">
+    import ImageComponent from "$lib/components/image_component.svelte";
   import Scroller from "$lib/components/scroller.svelte";
   import NavigationMenu from "$lib/components/topnav/navigationMenu.svelte";
   import Aside from "../lib/components/_home/aside.svelte";
@@ -27,7 +28,7 @@
       </div>
       <div class="grid flex-1 border rounded-b-lg grid-cols-1 sm:grid-cols-4 scrollbar-hide overflow-auto">
         {#each products as product (product.image)}
-          <img
+          <ImageComponent
             src={images[`/src/lib/assets/images/${product.image}`]}
             alt={product.name}
             class="aspect-square"
