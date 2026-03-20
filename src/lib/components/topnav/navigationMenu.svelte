@@ -42,8 +42,10 @@
 	items-center
 	justify-between
 	bg-white
-	shadow-md
+	sm:shadow-md
 	pl-3
+	border-b
+	border-gray-300
 	pr-5.25
 	gap-2.5
 	transition-all

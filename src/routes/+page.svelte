@@ -17,28 +17,29 @@
 
 <div class="relative h-full w-full">
   <NavigationMenu />
-  <div class="flex h-full">
+  <div class="flex h-full w-full">
     <aside
-      class="h-[90svh] sm:h-[88svh] flex flex-col px-0.5 py-1.5 sticky sm:top-[12svh] top-[10svh] w-[25%]"
+      class="h-svh flex flex-col sticky sm:top-[12svh] top-[10svh] w-[25%]"
     >
       <div
-        class="px-1 py-0.5 sticky rounded-t-lg top-0 bg-black text-white"
+        class="px-1 sticky top-0 bg-black text-white"
       >
         Categories
       </div>
-      <div class="grid flex-1 border rounded-b-lg grid-cols-1 sm:grid-cols-4 scrollbar-hide overflow-auto">
+      <div class="grid flex-1 gap-px border border-gray-300 rounded-b-lg grid-cols-1 sm:grid-cols-4 scrollbar-hide overflow-auto">
         {#each products as product (product.image)}
-          <ImageComponent
+          <div class="aspect-square">
+            <ImageComponent
             src={images[`/src/lib/assets/images/${product.image}`]}
             alt={product.name}
-            class="aspect-square"
           />
+          </div>
         {/each}
       </div>
     </aside>
 
     <div
-      class="grid flex-1 grid-cols-2 px-0.5 sm:px-6 pt-1.5 sm:pt-2.5 gap-x-1 sm:gap-x-2 gap-y-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
+      class="grid flex-1 grid-cols-2 px-0.5 sm:pt-1.5 sm:px-6 sm:gap-x-2 gap-y-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
     >
       {#each products as product (product.image)}
         <ProductCard {...product} />

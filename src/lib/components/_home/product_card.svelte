@@ -85,14 +85,14 @@
   data-sveltekit-preload-data={false}
   data-sveltekit-preload-code={false}
   href="/detail"
-  class="relative overflow-hidden group cursor-pointer rounded-lg"
+  class="relative overflow-hidden group cursor-pointer sm:rounded-lg"
 >
   {@render productImg()}
   {@render bottomInfo()}
 </a>
 
 {#snippet productImg()}
-  <div class="relative overflow-hidden rounded-lg">
+  <div class="relative overflow-hidden sm:rounded-lg">
     <ImageComponent
       alt={name}
       duration={2000}
