@@ -4,6 +4,14 @@
   import Aside from "../lib/components/_home/aside.svelte";
   import ProductCard from "../lib/components/_home/product_card.svelte";
   import products from "./data";
+
+  const images = import.meta.glob(
+    "$lib/assets/images/*.{avif,gif,jpg,jpeg,png,webp}",
+    {
+      eager: true,
+      import: "default",
+    },
+  ) as Record<string, string>;
 </script>
 
 <div class="relative h-full w-full">
@@ -20,7 +28,7 @@
       <div class="grid flex-1 border rounded-b-lg grid-cols-1 sm:grid-cols-4 scrollbar-hide overflow-auto">
         {#each products as product (product.image)}
           <img
-            src={`/src/lib/assets/images/${product.image}`}
+            src={images[`/src/lib/assets/images/${product.image}`]}
             alt={product.name}
             class="aspect-square"
           />
