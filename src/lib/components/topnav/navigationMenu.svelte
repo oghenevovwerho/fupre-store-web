@@ -33,16 +33,18 @@
 
 <nav
 	class="
-	sticky inset-x-0
+	sticky
 	top-0
 	z-50
 	flex
-	h-[10svh] sm:h-[12svh] w-full
+	h-[10svh] 
+	sm:h-[12svh]
 	items-center
 	justify-between
-	bg-[#faf9f7]
+	bg-white
 	shadow-md
-	px-2
+	pl-3
+	pr-5.25
 	gap-2.5
 	transition-all
 	duration-700

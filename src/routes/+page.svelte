@@ -6,24 +6,34 @@
   import products from "./data";
 </script>
 
-<div class="relative h-full w-full bg-[#faf9f7]">
+<div class="relative h-full w-full">
   <NavigationMenu />
   <div class="flex h-full">
     <aside
-      class="max-sm:hidden h-full bg-amber-700 sticky top-[12svh] w-[20%]"
+      class="h-[90svh] sm:h-[88svh] flex flex-col px-0.5 py-1.5 sticky sm:top-[12svh] top-[10svh] w-[25%]"
     >
-      <Aside />
-    </aside>
-
-    <div class="flex-1 flex flex-col gap-2 w-[80%]">
-      <Scroller />
       <div
-        class="grid grid-cols-2 max-sm:px-1 gap-x-2 gap-y-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
+        class="px-1 py-0.5 sticky rounded-t-lg top-0 bg-black text-white"
       >
+        Categories
+      </div>
+      <div class="grid flex-1 border rounded-b-lg grid-cols-1 sm:grid-cols-4 scrollbar-hide overflow-auto">
         {#each products as product (product.image)}
-          <ProductCard {...product} />
+          <img
+            src={`/src/lib/assets/images/${product.image}`}
+            alt={product.name}
+            class="aspect-square"
+          />
         {/each}
       </div>
+    </aside>
+
+    <div
+      class="grid flex-1 grid-cols-2 px-0.5 sm:px-6 pt-1.5 sm:pt-2.5 gap-x-1 sm:gap-x-2 gap-y-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
+    >
+      {#each products as product (product.image)}
+        <ProductCard {...product} />
+      {/each}
     </div>
   </div>
 </div>

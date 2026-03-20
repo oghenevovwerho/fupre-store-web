@@ -113,7 +113,7 @@
 </script>
 
 <div
-  class="bg-[#faf9f7] relative h-[90svh] sm:h-[88svh] px-2"
+  class="bg-[#faf9f7] relative h-full px-2"
 >
   <div class="flex flex-col flex-1">
     <button

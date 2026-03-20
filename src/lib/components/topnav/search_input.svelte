@@ -9,7 +9,7 @@
         placeholder="I'm shopping for..."
         type="text"
         autocomplete="off"
-        class="h-full w-full sm:pb-0.5 pl-2 placeholder:text-sm placeholder:text-[#a09890] text-gray-700 rounded-2xl bg-[#faf9f7] border-[1.25px] border-[#a09890] text-sm outline-0"
+        class="h-full w-full sm:pb-0.5 pl-2 placeholder:text-sm placeholder:text-[#a09890] text-gray-700 rounded-2xl  border-[1.25px] border-[#a09890] text-sm outline-0"
     />
     <div
         class="absolute inset-y-0 right-0 h-full aspect-square flex items-center justify-center"
@@ -17,7 +17,7 @@
         <button
             type="submit"
             aria-label="button"
-            class="bg-[#faf9f7] h-[90%] w-[90%] flex items-center justify-center border-[1.25px] border-dashed border-[#a09890] shadow-blue-100 rounded-[14px] hover:border-solid cursor-pointer active:scale-105"
+            class=" h-[90%] w-[90%] flex items-center justify-center border-[1.25px] border-dashed border-[#a09890] shadow-blue-100 rounded-[14px] hover:border-solid cursor-pointer active:scale-105"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"

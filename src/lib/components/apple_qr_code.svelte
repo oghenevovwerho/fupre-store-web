@@ -105,7 +105,7 @@
                         >
                             {stars}
                             <div
-                                class="h-[4px] flex-1 bg-gray-100 rounded-full overflow-hidden"
+                                class="h-1 flex-1 bg-gray-100 rounded-full overflow-hidden"
                             >
                                 <div
                                     class="h-full bg-[#f0a500] rounded-full"
